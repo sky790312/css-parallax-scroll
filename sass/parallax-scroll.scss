@@ -1,0 +1,34 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:900);
+
+@mixin background-size($argument){
+ -webkit-background-size: $argument;
+  -moz-background-size:   $argument;
+    -o-background-size:   $argument;
+       background-size:   $argument;
+}
+
+section.parallax {
+  height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed; // most important controll
+  @include background-size(cover);
+}
+section.parallax > h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 48px;
+  line-height: 600px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+section.parallax-1 {
+  background-image: url("../images/img1.jpg");
+}
+section.parallax-2 {
+  background-image: url("../images/img2.jpg");
+}
+section.parallax-3 {
+  background-image: url("../images/img3.jpg");
+}
